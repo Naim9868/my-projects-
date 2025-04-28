@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 97vh;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card{
+    background-color: rgb(51, 98, 215);
+    height: 210px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 119, 255, 0.5), 
+    0 8px 16px rgba(0, 68, 255, 0.5);;
+    text-align: center;
+    color: white;
+}
+.card h1{
+    margin: 10px 0 10px 0;
+}
+.dispInitial{
+    margin-bottom: 10px;
+}
+#inpNum{
+    padding: 2px;
+    width: 100px;
+}

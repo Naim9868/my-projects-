@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Design 2 </title>
+    <style>
+        *{
+            margin: 0;
+            padding:  0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+           
+            display: grid;
+            grid-template-rows: min-content auto 100px;
+            grid-template-areas:
+                'h'
+                'm'
+                'm'
+                'm'
+                'm'
+                'f'
+                ;
+        }
+        .header{
+            grid-area: h;
+            width: 100%;
+            background-color: pink;
+            border: 1px solid black;
+            text-align: center;
+            
+            
+        }
+        .main{
+            grid-area: m;
+            width: 100%;
+            height: 100%;
+            background-color: tan;
+            border: 1px solid black;
+            text-align: center;
+           
+            /* grid-template-columns: auto auto; */
+        }
+        article{
+            display: grid;
+            height: 100%;
+             grid-template-areas:
+            's1 a1'
+            's2 a2'
+            's3 .'
+            ; 
+        }
+        section{
+            background-color: blueviolet;
+        }
+        aside{
+            background-color: coral;
+        }
+        #nav1{
+            grid-area: n1;
+            border: 1px solid black;
+        }
+        #nav2{
+            grid-area: n2;
+            border: 1px solid black;
+        }
+        .footer{
+            grid-area: f;
+            width: 100%;
+            background-color: bisque;
+            border: 1px solid black;
+            text-align: center;
+            display: grid;
+            grid-template-areas:
+            'n1 n2'
+        }
+        #sec1{grid-area: s1; border: 1px solid black;}
+        #sec2{grid-area: s2; border: 1px solid black;}
+        #sec3{grid-area: s3; border: 1px solid black;}
+        #aside1{grid-area: a1; border: 1px solid black;}
+        #aside2{grid-area: a2; border: 1px solid black;}
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>Header Nav</nav>
+    </header>
+
+    <main class="main">
+        <article>
+            <section id="sec1">Section 1</section>
+            <section id="sec2">Section 2</section>
+            <section id="sec3">Section 3</section>
+
+            <aside id="aside1">Aside1</aside>
+            <aside id="aside2">Aside2</aside>            
+        </article>
+    </main>
+
+    <footer class="footer">
+        <nav id="nav1">Nav 1</nav>
+        <nav id="nav2">Nav 2</nav>
+    </footer>
+</body>
+</html>

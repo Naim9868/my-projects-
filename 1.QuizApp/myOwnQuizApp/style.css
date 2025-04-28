@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    
+}
+
+body{
+    background-color: #d9d0d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: 4px 3px 5px #444;
+}
+.header-container{
+    text-align: center;
+}
+
+.header h1{
+    padding: 10px;
+    margin: 10px;
+    color: rgb(138, 138, 214)
+}
+.progressBar{
+    background-color: #ddd;
+    height: 10px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+#progress{
+    background-color: yellowgreen;
+    height: 10px;
+    border-radius: 20px;
+    width: 0%;
+
+}
+
+.countContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.Question{
+    display: flex;
+    flex-direction: column;
+}
+#question{
+    font-size: 25px;
+    margin: 5px;
+    /* border: 1px solid black; */
+}
+
+.option{
+   
+}
+
+.option ul{
+   
+    margin: 25px;
+}
+.option ul li{
+    background-color: #aaa;
+    color: white;
+    margin: 10px 30px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 20px;
+    list-style-type: circle;
+
+}
+
+.result{
+
+}
+
+/* .NextQuestion{
+    display: hidden;
+} */
+
+.nextBtn{
+    margin-top: 20px;
+    display: none;
+    padding: 10px;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 10px;
+    transition: display 1s;
+}
+
+.correct{
+    background-color: green;
+}
+.wrong{
+    background-color: red;
+}
+
+@media screen and (min-width: 400px) {
+    .container{
+        width: 93%;
+        height: 96vh;
+    }
+    .header{
+        font-size: 10px;
+    }
+    .countContainer{
+        margin: 0 20px;
+    }
+    #question{
+        font-size: 18px;
+        margin: 0 5px;
+    }
+    .option ul {
+        margin: 5px 25px;
+    }
+    .option ul li {
+       
+        margin: 5px 30px;
+        padding: 5px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .container{
+        width: 93%;
+        height: 80vh;
+    }
+    .header{
+        font-size: 10px;
+    }
+    .countContainer{
+        margin: 0 20px;
+    }
+    #question{
+        font-size: 18px;
+        margin: 0 5px;
+    }
+    .option ul {
+        margin: 5px 25px;
+    }
+    .option ul li {
+       
+        margin: 5px 30px;
+        padding: 5px;
+    }
+}

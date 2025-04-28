@@ -1,0 +1,14 @@
+/* style for audio player.. */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+#volumeControl {
+    width: 100px;
+    vertical-align: middle;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex and Grid Layout Design</title>
+    <style>
+        .flex-container{
+            background-color: antiquewhite;
+            display: flex;
+            height: 300px;
+            /* flex-wrap: wrap;
+            flex-direction: row-reverse; */
+
+            flex-flow: wrap row;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        .grid-container{
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: repeat(autofill,minmax(1fr));
+            grid-template-rows: 50px 50px 50px 30px 60px;
+            /* grid-column-gap: 10px;
+            grid-row-gap: 10px;        */
+            grid-gap: 20px 5px;
+            /* justify-content:;
+            align-content: ; */
+        }
+        .four{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .three{
+            grid-column: 3/ span 2;
+        }
+        .twelve{
+            grid-column: 1/span 4;
+        }
+        .thirteen{
+            grid-column: 2/4;
+        }
+        .fifteen{
+            grid-row: 6/8;
+        }
+        .flex-container div{
+            background-color: red;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            height: 50px; width:50px;
+        }
+        .grid-container div{
+            background-color: greenyellow;
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        .flex{
+            background-color: cornflowerblue;
+            width:100%;
+            height: 200px;
+        }
+        .flex div  p{
+            flex: 1;
+            background-color: yellow;
+            height: 100px; text-align: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            /* transform: translate(-50%,-50%); */
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="flex-container">
+        <div>div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <div>div5</div>
+        <div>div6</div>
+        <div>div7</div>
+        <div>div8</div>
+        <div>div9</div>
+        <div>div10</div>
+        <div>div11</div>
+        <div>div12</div>
+    </div>
+    <br><br><br>
+
+    <div class="grid-container">
+        <div class="one">div1</div>
+        <div class="two">div2</div>
+        <div class="three">div3</div>
+        <div class="four">div4</div>
+        <div class="five">div5</div>
+        <div class="six">div6</div>
+        <div class="seven">div7</div>
+        <div>div8</div>
+        <div>div9</div>
+        <div>div10</div>
+        <div>div11</div>
+        <div class="twelve">div12</div>
+        <div class="thirteen">div13</div>
+        <div>div14</div>
+        <div class="fifteen">div15</div>
+        <div>div16</div>
+        <div>div17</div>
+        <div>div18</div>
+        <div>div19</div>
+        <div>div20</div>
+        <div>div21</div>
+        <div>div22</div>
+        <div>div23</div>
+        <div>div24</div>
+
+    </div><br><br><br>
+    <div class="flex">
+        <div><p>this is for flex:1 experiment.</p></div>
+    </div>
+</body>
+</html>

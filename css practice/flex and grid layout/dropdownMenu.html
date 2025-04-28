@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown Menu & Navigation Bar</title>
+    <style>
+           body{
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			.one ul{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				/* overflow: hidden; */
+				background-color: #2e75b0;
+                display: flex;
+               
+			}
+			 /* .one li{
+				float: left;
+               
+			} */
+			.one li a{
+				text-decoration: none;
+				padding: 12px  16px;
+                color: white;
+				font-size: 20px;
+				display: block;
+                /* display: inline-block; */
+                /* width: 70px; */
+			}
+			.active{
+				background-color: rgb(76, 86, 219);
+			}
+			 .one li>a:hover:not(.active){
+				background-color: #ddd;
+				color:rgb(16, 13, 13);
+			}
+			.dropdown{
+				display: block;
+                position: relative;
+			}
+			.drop-content a{
+				display: block;
+				background-color: rgb(85, 108, 154);
+				color: white;
+				width: 100%;
+			}
+			.drop-content{
+				display: none;
+				
+			}
+			.dropdown:hover .drop-content{
+				display: block;
+                position: absolute;
+				
+				z-index: 1;
+			}
+			.drop-content a:hover{
+				background-color: rgb(164, 192, 164);
+				color: black;
+			}
+			
+    </style>
+</head>
+<body>
+    <div class="one">
+			<ul>
+				<li><a class="active" href="#home"> home</a></li>
+				<li><a href="#contact"> contact</a></li>
+				<li><a href="#news">news </a></li>
+				<li class="dropdown">
+					<a class="dropbtn" href="#dropdown"> dropdown</a>
+					<div class="drop-content">
+						<a href="#link1">link 1</a>
+						<a href="#link1">link 2</a>
+						<a href="#link1">link 3</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+</body>
+</html>

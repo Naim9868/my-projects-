@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6ec515b1c7.js" crossorigin="anonymous"></script>
+    <title>Linkable Icon Button</title>
+    <style>
+        .social{
+            background-color: gray;
+            text-align: center;
+        }
+        .social .btn i{
+            border: none;
+            padding: 10px 15px;
+            font-size: 25px;
+          
+        }
+        social .btn span{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .btn{
+            border: none;
+            position: relative;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="social">
+        <button class="btn facebook" onclick="window.open('https://www.facebook.com/?_rdr')" class="btn request-callback">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+        </button>
+        <button class="btn messenger" onclick="window.open('https://www.messenger.com/')" class="btn request-callback">
+            <i class="fa-brands fa-facebook-messenger"></i>
+           <span>messenger</span>
+        </button>
+        <button class="btn" onclick="window.open('https://www.google.com/')" class="btn request-callback">
+            <i class="fa-brands fa-google"></i>
+            <span>google</span>
+        </button>
+        <button class="btn" onclick="window.open('https://www.instagram.com/')" class="btn request-callback">
+            <i class="fa-brands fa-instagram"></i>
+            <span>instagram</span>
+        </button>
+        <button class="btn" onclick="window.open('https://web.whatsapp.com/')" class="btn request-callback">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>whatsapp</span>
+        </button>
+    </div>
+
+</body>
+</html>

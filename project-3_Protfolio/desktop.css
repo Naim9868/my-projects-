@@ -1,0 +1,201 @@
+/* for desktop */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*='col-']{
+    float: left;
+}
+
+/* navbar design starts here */
+.nav-header{
+    text-align: center;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 20px;
+}
+.nav-menu a{
+    padding: 5px 15px; border-radius: 5px;
+    background-color:rgb(154, 70, 232);
+    margin: 2px;  transition: font-size 0s;
+}
+.nav-menu a:hover{
+    background-color: black;
+    font-size: 20px;
+}
+.navbar{
+    content: '';
+    display: table;
+    clear: both;
+    width: 100%;
+    padding: 0;
+}
+/* navbar design ends here */
+
+/* profile design starts here. */
+.profile .top-image,.profile .bottom-image{
+    height: 80px; width: 140px;
+}
+.top-image{
+   
+    position: absolute;
+    right: 100px; top: 10px;
+   
+    transition: width 2s,transform 2s;
+}
+.bottom-image{
+   
+    position: absolute;
+    bottom: 20px; left: 80px;
+  
+    transition: width 2s,transform 2s;
+}
+.image-hover:hover{ 
+    width: 150px;
+    /* transform: rotate(360deg); */
+}  
+.pro-header p{
+    margin: 0 auto;
+    color:black;
+    width: 60%;
+}
+/* profile design ends here. */
+
+/* about me starts here */
+.aboutme{
+    display: flex;
+    justify-items: center;
+    vertical-align: center; 
+}
+
+.about-image img{
+    margin-top: 30px;
+    height: 300px;
+    width: 250px; border: 4px solid black;
+    border-radius: 50%;
+}
+.about-div{
+    margin: 150px 30px 0 0;
+    /* display: inline; */
+    border: 3px solid white;
+    height: 100px;
+    width:250px;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-top: none;
+    background-color: rgb(162, 102, 162);
+}
+.about-div .hor-rule{
+    /* visibility: none;" not work" */
+    display: none;
+} 
+.aboutme .about-desc p,.aboutme .about-desc p h3{
+    text-align: left;
+}
+/* about me ends here */
+
+/* design for work experience section  starts*/
+.qualification{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+
+}
+.card{
+    width:300px;
+    height:450px;
+    margin: 10px 15px;
+}
+.card .progress-bar li::before{
+    position: absolute;
+    top: 20px; left: 0;
+    content:'';
+    height: 13px; width: 230px;
+    background-color: white;
+    border-radius: 10px;
+}
+/* design for work experience section end */
+
+/* design achevements contacts and social media button starts */
+.gain{
+    /* font-family: "Sour Gummy", serif; */
+    /* height: 400px; */
+    background-color: #16a085  ;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+.col-4{
+    padding: 10px;
+    margin: 20px 5px 20px 5px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.achivement ol{
+    text-align: left;
+    font-family: "Sour Gummy", serif;
+    margin-top: 20px;
+}
+.col-4 h2{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+    display: inline;
+}
+.hrule{ 
+   display: none;
+}  
+.contacts form{
+    position: relative;
+    top: 30px;
+}
+.social-media{
+    margin-top: 20px;
+}
+
+/* design achevements contacts and social media button ends */
+
+/* footer design starts here */
+.footer{
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-menu a{
+    display: inline;
+
+}
+
+.footer-menu a:hover{
+    color: gray;
+}
+
+/* .footer-desc{
+    display: table;
+    content: '';
+    clear: both;
+}  */
+/* footer design ends here */

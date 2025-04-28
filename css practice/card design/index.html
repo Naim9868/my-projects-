@@ -1,0 +1,201 @@
+<!--layout design-->
+~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tooltip{
+            padding: 5px;
+            text-decoration: none;
+            position: relative;
+        }
+        .tooltip-text{
+            visibility: hidden;
+            width: 100px;
+            border: 1px solid black;
+            background-color: blue;
+            color: white;
+            position: absolute;
+            top:25px;
+            left: 20px;
+            box-shadow: 3px 3px 4px purple;
+            z-index: 1;
+
+        }
+        .tooltip:hover .tooltip-text{
+            visibility: visible;
+        }
+        .myDiv{
+            box-sizing: border-box;
+            background-color: antiquewhite;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            height: 300px;
+            overflow: scroll;
+            position: relative;
+            left: 30px;
+            z-index: 0;
+        }
+        .div-container{
+            height: 200px;
+            background-color: purple;
+            display: flex;
+            /*flex-wrap: wrap;
+            flex-direction:row; */
+            flex-flow: wrap row;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        .div-container div{
+            width: 100px;
+            height:50px;
+            background-color: teal;
+            border: 1px solid black;
+            font-size: 25px;
+            padding: 5px;
+            margin: 10px;
+        }
+        .text-shadow{
+            margin: 20px;
+            color: blue;
+            text-shadow: 5px -5px 4px purple;
+            font-size: 25px;
+        }
+        .box-shadow{
+            border: 2px solid black;
+            height:200px;
+            width: 300px;
+            background-color: blueviolet;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 8px 10px 5px purple;
+            margin-bottom: 50px;
+        }
+        /*designing a card*/
+        .card-container{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: wrap row;
+            background-color: aquamarine;
+        }
+        .card{
+            height: 500px;
+            width: 300px;
+            border: 1px solid coral;
+            box-sizing: border-box;
+            margin: 20px;
+            box-shadow: 5px 5px 5px purple;
+        }
+        .card img{
+            width: 100%;
+           height:200px;
+        }
+        .card-body{
+            background-color: purple;
+            padding: 10px;
+            height: 280px;
+            
+        }
+        .card .card-title{
+            text-align: justify;
+            color: white
+        }
+        .card .cardDescription{
+            text-align: justify;
+            color:aqua
+           
+        }
+        .card:hover{
+            box-shadow: 8px 10px 5px blueviolet;
+            /* transition: 100ms; */
+        }
+    </style>
+</head>
+<body>
+    <a class="tooltip" href="#"> Facebook
+        <span class="tooltip-text">Time waster social media</span>
+    </a>
+    <div class="myDiv">
+        <P>In a quiet, bustling city nestled between towering
+             mountains and vast forests, the days began to unfold
+              with the soft glow of dawn, casting a golden hue over
+               the tranquil streets. Life here followed a gentle rhythm,
+                a harmony between modernity and nature that gave the 
+                town its unique charm. Small coffee shops dotted the 
+                sidewalks, and each morning, the rich aroma of freshly 
+                brewed coffee mingled with the crisp, mountain air,
+                 drawing locals and visitors alike. </P>
+    </div>
+    <br><br>
+    <div class="div-container">
+        <div class="div1">
+            div 1
+        </div>
+        <div class="div2">
+            div 2
+        </div>
+        <div class="div3"style="">div 3</div>
+        <div class="div4">div 4</div>
+        <div class="div5"> div 5</div>
+        <div class="div6">div 6</div>
+        <div class="div7">div 7</div>
+        <div class="div8"style="flex: ">div 8</div>
+    </div>
+
+    <!---text-shadow and box-shadow-->
+    <div class="text-shadow"><p>some text here </p></div>
+    <div class="box-shadow">
+        <h1>This is for box shodow.</h1>
+    </div>
+    <!---text-shadow and box-shadow end-->
+    <br><br>
+    <!--disigning a card-->
+    <div class="card-container">
+        <div class="card">
+            <img src="python programming image.jpg" alt="no image found">
+           <div class="card-body">
+            <div class="card-title">
+                <h2><i> Python-programming</i></h2>
+             </div>
+             <div class="cardDescription"> 
+                 <p>Python is a versatile, high-level programming language
+                     known for its simplicity and readability, making it
+                      popular among both beginners and experienced developers.
+                       Created by Guido van Rossum and first released in 1991,
+                        Python emphasizes code readability with its clean 
+                        syntax and use of indentation</p>
+             </div>
+           </div>
+        </div>
+
+        <div class="card">
+            <img src="c_image.jpg" alt="no image found">
+           <div class="card-body">
+            <div class="card-title">
+                <h2><i> C-programming</i></h2>
+             </div>
+             <div class="cardDescription"> 
+                 <p>C is a powerful, general-purpose programming language developed by Dennis Ritchie in the early 1970s. Known for its efficiency and performance, C provides low-level access to memory and hardware, making it ideal for system programming, operating systems, and embedded systems. It’s structured, procedural, and statically typed, with a simple syntax that allows for efficient execution.</p>
+             </div>
+           </div>
+        </div>
+
+        <div class="card">
+            <img src="js_image.jpg" alt="no image found">
+           <div class="card-body">
+            <div class="card-title">
+                <h2><i> JavaScript-programming</i></h2>
+             </div>
+             <div class="cardDescription"> 
+                 <p>JavaScript is a versatile, high-level programming language primarily used for adding interactivity to web pages. Initially developed to run in browsers, it allows developers to create dynamic content, handle events, and control multimedia. Over time, JavaScript has expanded to include backend development with frameworks like Node.js,</p>
+             </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated progress bar</title>
+    <style>
+        .skill{
+            background-color: gray;
+            width: 300px; height: 200px;
+            padding: 20px;
+            
+        }
+        .skill li{
+            margin: 30px 0px; position: relative;
+            list-style-type: none; text-transform: uppercase;
+        }
+        .skill li::before{
+            content:""; width: 250px; height: 20px;
+            background-color: white; position: absolute;
+            top:20px; left: 0; border-radius: 100px;
+        }
+        .skill li::after{
+            content:""; width: 0; height: 20px;
+            background-color: orange; position: absolute;
+            top:20px; left: 0; border-radius: 100px;
+
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+        .skill li.html::after{
+            animation-name: html;
+           
+        }
+        @keyframes html {
+                0%{width:0%;}
+                100%{width: 80%;}
+        }
+        .skill li.css::after{
+            animation-name: css;
+        }
+        @keyframes css {
+                from{width:0%;}
+                to{width: 60%;}
+        }
+        .skill li.js::after{
+            animation-name: js;
+        }
+        @keyframes js {
+                from{width:0%;}
+                to{width: 70%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="skill">
+        <ul>
+            <li class="html">html</li>
+            <li class="css">css</li>
+            <li class="js">js</li>
+        </ul>
+    </div>
+</body>
+</html>

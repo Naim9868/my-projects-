@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Using Grid View.</title>
+    <script src="https://kit.fontawesome.com/6ec515b1c7.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        .header{
+            background-color: coral;
+            height: 100px;
+            text-align: center;
+            align-content: center;
+        }
+        .row .navBar{
+           /* width: 100%; */
+           /* height: 50px; */
+           padding: 15px;
+           background-color: rgb(44, 151, 227);
+           /* margin: 5px; */
+           /* margin: 2px 0px; */
+           /* padding-top: 10px; */
+
+        }
+        .navBar a{
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 8px;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            background-color: aqua;
+           
+        }
+        .main{
+            background-color: rgb(129, 228, 225);
+            padding: 20px;
+            text-align: justify;
+        }
+        .aside{
+            background-color: rgb(44, 151, 227) ;
+            /* margin-top: 2px; */
+            padding: 20px;
+            text-align: center;
+
+        }
+        .aside h1{
+            padding: 5px;
+        }
+        .footer{
+            background-color: rgb(65, 53, 53);
+            color: white;
+            text-align: center;
+            margin-top: 5px;
+        }
+ /*now make responsive for dekstopl.*/
+        @media screen and (min-width: 600px){
+        
+        .col-t-1{width: 8.33%;}
+        .col-t-2{width: 16.66%;}
+        .col-t-3{width: 25%;}
+        .col-t-4{width: 33.33%;}
+        .col-t-5{width: 41.66%;}
+        .col-t-6{width: 50%;}
+        .col-t-7{width: 58.33%;}
+        .col-t-8{width: 66.66%;}
+        .col-t-9{width: 75%;}
+        .col-t-10{width: 83.33%;}
+        .col-t-11{width: 91.66%;}
+        .col-t-112{width: 100%;}
+        .row{
+            box-sizing: border-box;
+        }
+
+        /* layout using float 
+        .row div{
+          float: left;
+          padding: 10px;
+         }  */
+        
+          [class*="col-t-"]{/* this is a method of select all class*/
+            float: left;
+            padding: 10px;
+         }
+
+          
+        .row::after{
+            content: "";
+            display: table;
+            clear:both;
+        }
+
+        /* layout using "Grid"
+        .row{
+            display: grid;
+            grid-template-columns: 20% 52% 28%;
+            grid-gap: 2px 2px;
+           
+           lauout using "Grid"
+        } */
+      
+        .navBar a:hover{
+            background-color: white;
+            color: rgb(17, 0, 255);
+        }
+        
+       }
+
+       @media screen and (min-width: 780px){
+         /*now make responsive for dekstopl.*/
+        .col-1{width: 10%;}
+        .col-2{width: 20%;}
+        .col-3{width: 30%;}
+        .col-4{width: 40%;}
+        .col-5{width: 50%;}
+        .col-6{width: 60%;}
+        .col-7{width: 70%;}
+        .col-8{width: 80%;}
+        .col-9{width: 90%;}
+        .col-10{width: 100%;}
+        .row{
+            box-sizing: border-box;
+        }
+
+        /* layout using float 
+        .row div{
+          float: left;
+          padding: 10px;
+         }  */
+        
+          [class*="col-"]{/* this is a method of select all class*/
+            float: left;
+            padding: 10px;
+         }
+
+          
+        .row::after{
+            content: "";
+            display: table;
+            clear:both;
+        }
+
+        /* layout using "Grid"
+        .row{
+            display: grid;
+            grid-template-columns: 20% 52% 28%;
+            grid-gap: 2px 2px;
+           
+           lauout using "Grid"
+        } */
+      
+        .navBar a:hover{
+            background-color: white;
+            color: rgb(17, 0, 255);
+        }
+        
+       }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Naimul Islam</h1>
+    </div>
+
+    <div class="row">
+        <div class="navBar col-t-3 col-2">
+            <a href="#home">Home</a>
+            <a href="#Tutorial">Tutorial</a>
+            <a href="#contact">Contact</a>
+            <a class="right" href="#about">About</a>
+        </div>
+
+        <div class="main col-t-9 col-5">
+            <h1>I am a student of EEE</h1><br>
+            <p>I am from Dhaka Bangladesh.</p><br>
+            <p>I am a student of Electrical and Electronics Engineering (EEE), passionate about exploring the intricacies of circuits, electronics, and electrical systems. My academic journey involves studying diverse topics, from power systems to microelectronics, and I am constantly inspired by how technology shapes our world. I aim to deepen my knowledge, work on innovative projects, and contribute to advancements in the field of EEE.</p>
+            <br>
+            <p>As an Electrical and Electronics Engineering student, I enjoy delving into both theoretical concepts and practical applications of technology. I am particularly intrigued by emerging fields like renewable energy, robotics, and embedded systems, which have the potential to revolutionize industries. Through coursework, hands-on experiments, and projects, I strive to sharpen my problem-solving skills and stay updated with the latest advancements in the field. My goal is to apply my knowledge to develop innovative solutions that can positively impact society.</p>
+        </div>
+
+        <div class="aside col-t-12 col-3">
+            <h1>What I do.</h1>
+            <p>Bacically I do web design. I am not professional yet.But I am trying to make myself better like proffessional.</p>
+            <h1>What I love.</h1>
+            <p>I love to earn money.I love girls as though I have not any girl friend.Its forbiden in our religion to keep girlfriend.</p>
+            <h1>What I don't love.</h1>
+            <p>I don't love proverty.Its very dengerous.A man could not do anything for it. I always pray to Allah for remove proverty. </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span><i class="fa-regular fa-copyright"></i>Copyright By </span>
+        <p>Naimul Islam</p>
+    </div>
+</body>
+</html>

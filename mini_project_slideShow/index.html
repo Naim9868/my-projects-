@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slide current">
+            <i class="fa-solid fa-image"></i>
+            <h1>Gallery</h1>
+        </div>
+
+        <div class="slide">
+            <i class="fa-solid fa-camera "></i>
+            <h1>Camera</h1>
+        </div>
+
+        <div class="slide">
+            <i class="fa-solid fa-cloud"></i>
+            <h1>Cloud</h1>
+        </div>
+
+        <div class="slide">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <h1>Thumbs Up</h1>
+        </div>
+
+        <div class="slide">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h1>Pen Nib</h1>
+        </div>
+    </div>
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const Slide = Array.from(slides);
+        let count = 1;
+        setInterval(()=>{
+            count ++;
+            let currentElement = document.querySelector(".current");
+           
+            if(count>Slide.length){
+                Slide[0].classList.add("current");
+               count = 1;
+            }else{
+                
+                currentElement.nextElementSibling.classList.add("current");
+            }
+            currentElement.classList.remove("current");
+
+            
+
+        },3000);
+        
+    </script>
+</body>
+</html>

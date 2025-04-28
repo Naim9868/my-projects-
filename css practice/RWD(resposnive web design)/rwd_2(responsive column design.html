@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive column design</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .row{
+           
+        }
+        /* .column{
+            float: left;
+            padding: 10px;
+            width: 25%;
+        }
+        @media screen and (max-width: 900px){
+            .column{
+                float: left;
+                width: 50%; 
+            }
+        }
+        @media screen and (max-width: 600px){
+            .column{
+                width: 100%;
+            }
+        } */
+         /* উপরের same কাজ display: flex; ব্যাবহার করেও করা যায়। */
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .column{
+           flex: 25%;
+            padding: 10px;
+        }
+        @media screen and (max-width: 1000px){
+            .column{
+                flex: 50%;
+            }
+        }
+        @media screen and (max-width:600px){
+            /* .column{
+             flex: 100%;
+            } or */
+            .row{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <h1>HTML</h1>
+            <p>Taking time for self-reflection can transform how we approach challenges in life. In a fast-paced world, pausing to assess our values, goals, and progress is essential for personal growth. It helps us identify patterns, clarify priorities, and make meaningful decisions. Reflecting also nurtures mindfulness, reducing stress and increasing resilience. </p>
+        </div>
+        <div class="column">
+            <h1>CSS</h1>
+            <p>Whether through journaling, meditating, or having deep conversations, these moments of introspection allow us to reconnect with ourselves. Ultimately, self-reflection isn't just about looking back but also envisioning the future we want to create. By making it a regular practice, we unlock the power to lead more intentional, fulfilling lives.</p>
+        </div>
+        <div class="column">
+            <h1>JS</h1>
+            <p>Whether through journaling, meditating, or having deep conversations, these moments of introspection allow us to reconnect with ourselves. Ultimately, self-reflection isn't just about looking back but also envisioning the future we want to create. By making it a regular practice, we unlock the power to lead more intentional, fulfilling lives.</p>
+        </div>
+        <div class="column">
+            <h1>Bootstrap</h1>
+            <p>Taking time for self-reflection can transform how we approach challenges in life. In a fast-paced world, pausing to assess our values, goals, and progress is essential for personal growth. It helps us identify patterns, clarify priorities, and make meaningful decisions. Reflecting also nurtures mindfulness, reducing stress and increasing resilience.</p>
+        </div>
+    </div>
+</body>
+</html>

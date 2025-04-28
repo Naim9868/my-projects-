@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+        }
+
+        #hiddenImage {
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        } */
+        /* body{
+          height: 150%;
+        }*/
+        
+        div{
+          height: 200px;
+          width: 200px;
+          background-color: pink;
+          animation-name: move;
+          animation-duration: 3s;
+          animation-fill-mode: both;
+          animation-delay: 5ms;
+        }
+        div:hover{
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+        @keyframes move {
+          0%{
+            background-color: black;
+            border: 2px solid red;
+          }
+          100%{
+            background-color: red;
+          }
+        }
+    </style>
+    
+</head>
+<!--<body>  */ -->
+    <!-- <h1 id="header_1">I am Naim.</h1>
+    <p id="demo"></p>
+    -->
+    
+   
+     <!-- <button id="btn1" onclick="fun1()">Image 1</button>
+    <p id="demo1"></p><br/>
+    
+    <button id="btn2" onclick="fun2()">image 2</button>
+     <p id="demo2"></p><br/>
+   
+    <button id="btn3" onclick="fun3()">Image 3</button>
+    <p id="demo3"></p><br/>
+    
+    <button id="btn4" onclick="document.querySelector('demo6').innerHTML = Date()">click me</button>
+   
+    <img id="image"style="max-width: 300px; " src="#" alt="nothing"> -->
+
+    <!-- Toggle Image Visibility on click -->
+    <!-- <button id="showImageBtn">Click to Show Image</button>
+    <img id="hiddenImage" src="revision/random.jpg" alt="Hidden Image" style="display: none; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); max-width: 300px;"> -->
+
+    <!-- Change image source on click -->
+    <!-- <button id="changeImageBtn">Click to Change Image</button>
+    <img id="displayedImage" src="https://plus.unsplash.com/premium_photo-1664303228186-a61e7dc91597?q=80&w=992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dynamic Image" style="border-radius: 8px; max-width: 300px;">
+     -->
+
+     <!-- Method 3: Modal Popup Image (Best for Galleries) -->
+     <!-- <button id="openModalBtn">Click to Open Image</button>
+
+     Modal Structure 
+     <div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center;">
+       <img id="modalImage" src="https://images.unsplash.com/photo-1429087969512-1e85aab2683d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="max-width: 80%; max-height: 80%; border-radius: 8px;">
+       <button id="closeModalBtn" style="position: absolute; top: 20px; right: 20px; background: #ff6b6b; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Close</button>
+     </div> -->
+
+     <!-- Find creat add remove -->
+      <!-- <a href="#"> visit site</a>
+     <div class="class_1 class_2 class_3">
+        <h1>hello</h1>
+        <h2>world</h2>
+        <h3>fucking obsesed</h3>
+        <div>
+          <p>hi this paragraph is testing purpose</p>
+          <p>this is also</p>
+        </div>
+     </div> -->
+
+       <!-- image slider -->
+       <!-- <button onclick="prev()">previous</button>
+       <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" style="max-width: 300px;max-height: 400px; display: block; "alt="">
+       <button onclick="next()">next</button> -->
+       
+       <!-- image slider with AI -->
+      
+       <!-- <div class="slider">
+          Images
+          <div class="slides">
+              <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" class="active">
+              <img src="https://images.unsplash.com/photo-1504470695779-75300268aa0e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+              <img src="https://images.unsplash.com/photo-1550686041-366ad85a1355?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+
+          Navigation Buttons
+          <button class="prev">←</button>
+          <button class="next">→</button>
+       </div> -->
+
+       <!-- <button >button</button>
+       <p>This is a paragraph.</p> -->
+       <!-- <p>you have 4 buttons</p>
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+        <button>Button 4</button> -->
+      
+        <!-- Audio player  -->
+        <!-- <h2>Audio Player</h2>
+    
+        Track buttons  
+        <button id="a" class="track-btn play_1">play_1</button>
+        <button id="b" class="track-btn play_2">play_2</button>
+        <button id="c" class="track-btn play_3">play_3</button>
+        <br>
+        <h3 style="text-align: center;">Control buttons</h3>
+         <br>
+        <button id="pauseBtn"class="d" disabled>⏸️ Pause</button>
+        <button id="stopBtn" class="e" disabled>⏹️ Stop</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.7"> -->
+
+        <!-- <p>This is paragraph.</p><br>
+        <button>click me</button> -->
+        <!-- <p></p>
+        <button class="btn">button 1</button>
+        <button class="btn">button 2</button>
+        <button class="btn">button 3</button>
+        <textarea name="" id=""></textarea>
+        <p></p>-->
+
+        <!-- <label for="name">
+          Name:<input id="ip" class="inp" type="text" name="name">
+        </label> 
+         -->
+
+         <!-- <div>
+          <h4>Programming Language:</h4>
+            <label for="program">
+                <input type="checkbox" name="program" value="C"> C
+            </label>
+            <label for="program">
+               <input type="checkbox" name="program"  value="Java Script">Java Script
+            </label>
+            <label for="program">
+                <input type="checkbox" name="program" value="python"> Python
+            </label>
+            <label for="program">
+                <input type="checkbox" name="program" value="Java">Java
+            </label>
+        </div> -->
+<!-- 
+        <label for="depertment">Depertment</label>
+        <select name="depertment" id="dept">
+          <option value="eee">EEE</option>
+          <option value="cse">CSE</option>
+          <option value="ce">CE</option>
+          <option value="me">ME</option>
+        </select> -->
+
+
+       <!-- <form action="">
+        <div>
+          <lebel>Name: <input type="text" id="name" name="lname"></lebel>
+        </div>
+        <div>
+          <lebel>Email: <input type="email" id="Email" name="email"></lebel>
+        </div>
+        <div>
+          <lebel>password: <input type="password" id="password" name="Password"></lebel>
+        </div>
+        <div><input type="submit" value="signUp" id="signUp"></div>
+       </form> -->
+<!--        
+       <video src="Limitless in Real Life(720P_HD).mp4" loop type="mp4" controls style="height:300px; width: 500px;">Limitless in Real Life(720P_HD).mp4</video>
+       <p></p>
+
+       <br>
+       <details>
+        <summary>Naim</summary>
+        <p>This is Naim. He is a very poor boy.He has nothing to lose.</p>
+       </details>
+
+       <a href="https://www.w3schools.com/js/js_object_display.asp#gsc.tab=0&gsc.q=the%20sigficance%20of%20name%20attribute">w3schools</a>
+       <br><br>
+       <textarea name="message" id="text"></textarea>
+       <br><br>
+       <input type="text">
+       
+       <p id="clipboard"></p> -->
+
+       <!-- <div id="div" style="width:500px; height: 300px;border: 1px solid black; background-color:rgb(148, 181, 82);">
+          <input type="file" id="fileinput" multiple>
+       </div>
+       <p id="para" draggable="true">this is for drag.</p> -->
+
+
+
+    
+<body>
+      <!-- error handling -->
+      
+          <div></div>
+</body>
+      
+   
+    <script src = "index.js"></script>
+    <script src="index1.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, hsl(240, 28%, 14%), #354f97);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 75vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #e94560;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color: #0f3460;
+            color: white;
+            border: none;
+            margin: 3px;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+        }
+
+        button:hover {
+            background-color: #e94560;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #timeDisplay {
+            font-size: 5rem;
+            font-weight: 400;
+            /* border: 1px solid black; */
+            margin: 5px 0;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        #dateDisplay {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #a1a1a1;
+        }
+
+        #ampmDisplay {
+            font-size: 2rem;
+            color: #e94560;
+            margin-top: 3px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            #timeDisplay {
+                font-size: 3.5rem;
+            }
+            
+            button {
+                padding: 10px 15px;
+                font-size: 14px;
+                min-width: 100px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <button class="save">Save</button>
+    <button id="startBtn">Start Clock</button>
+    <button id="formatBtn">12h/24h format</button>
+    <br>
+    <p id="timeDisplay"></p>
+    <p id="dateDisplay"></p>
+    <p id="ampmDisplay"></p>
+
+
+    <script>
+        // DOM Elements
+        const startBtn = document.getElementById('startBtn');
+        const formatBtn = document.getElementById('formatBtn');
+        const timeDisplay = document.getElementById('timeDisplay');
+        const dateDisplay = document.getElementById('dateDisplay');
+        const ampmDisplay = document.getElementById('ampmDisplay');
+        
+        // Clock state
+        let is24HourFormat = false;
+        let clockInterval;
+        let isClockRunning = false;
+        
+        // Initialize
+        updateClock(); // Show initial time immediately
+        updateFormatButton();
+        
+        // Event Listeners
+        startBtn.addEventListener('click', toggleClock);
+        formatBtn.addEventListener('click', toggleTimeFormat);
+        
+        // Main clock function
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            
+            // Format time based on current format setting
+            let displayHours = hours;
+            let ampm = '';
+            
+            if (!is24HourFormat) {
+                // 12-hour format conversion
+                ampm = hours >= 12 ? 'PM' : 'AM';
+                displayHours = hours % 12;
+                displayHours = displayHours ? displayHours : 12; // Convert 0 to 12
+            }
+            
+            // Format with leading zeros
+            const formattedTime = [
+                padZero(displayHours),
+                padZero(minutes),
+                padZero(seconds)
+            ].join(':');
+            
+            // Update displays
+            timeDisplay.textContent = formattedTime;
+            ampmDisplay.textContent = ampm;
+            dateDisplay.textContent = formatDate(now);
+            
+            return { hours, minutes, seconds };
+        }
+        
+        // Helper function to pad with zero
+        function padZero(num) {
+            return num < 10 ? `0${num}` : num;
+        }
+        
+        // Format date as "Weekday, Month Day, Year"
+        function formatDate(date) {
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            return date.toLocaleDateString(undefined, options);
+        }
+        
+        // Toggle clock start/stop
+        function toggleClock() {
+            if (isClockRunning) {
+                clearInterval(clockInterval);
+                startBtn.textContent = 'Start Clock';
+            } else {
+                clockInterval = setInterval(updateClock, 1000);
+                startBtn.textContent = 'Stop Clock';
+            }
+            isClockRunning = !isClockRunning;
+        }
+        
+        // Toggle between 12/24 hour format
+        function toggleTimeFormat() {
+            is24HourFormat = !is24HourFormat;
+            updateFormatButton();
+            updateClock(); // Immediate update when format changes
+        }
+        
+        // Update format button text
+        function updateFormatButton() {
+            formatBtn.textContent = is24HourFormat ? 'Switch to 12h' : 'Switch to 24h';
+        }
+        </script>
+</body>
+</html>

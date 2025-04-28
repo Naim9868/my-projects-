@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    box-sizing: border-box;
+    max-width: 1100px;
+    background-color: rgb(139, 232, 240);
+    padding: 10px;
+    margin: 0 auto;
+}
+.profileImg{
+    width:200px;
+    height: 200px;
+    border: 2px solid wheat;
+    border-radius: 50%;
+    float: left;
+}
+#profile{
+   
+    float: left;
+    margin: 65px 0 0 30px;
+}
+#header-contacts{
+    float: right;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 50px;
+}
+#header-contacts p a{
+    text-decoration: none;
+    color: teal;
+    font-size: 18px;
+}
+#header-contacts p a:hover{
+    text-decoration: underline;
+    color: tomato;
+}
+h1,h2,h3,h4,h5,h6{
+    color: #0b6bea;
+}
+/*for clear div*/
+.float-clear{
+    clear: both;
+}
+/*for horizontal role bold*/
+#hor_role{
+    border: 3px solid black;
+    margin:15px 0 0 0;
+    width: 100%;
+    border-bottom: none;
+}
+/*horizontal role thick*/
+hr{
+    border: 1px solid black;
+    margin:5px 0 0 0;
+    width: 100%;
+    border-bottom: none;
+}
+/* objective section starts*/
+.sec0 .div1{
+    max-width: 40%;
+    float: left;
+    padding: 20px;
+}
+.sec0 .div2{
+    max-width: 60%;
+    float: left;
+    padding: 20px;
+    margin-left: 120px;
+
+}
+/*objective section end*/
+/* personal information start*/
+.sec1 .div1{
+    max-width: 40%;
+    padding: 20px;
+    float: left;
+}
+.sec1 .div2{
+    max-width: 60%;
+    padding: 20px;
+    float: left;
+}/* personal information end*/
+
+/* work experience start*/
+.sec2 .div1{
+    max-width: 40%;
+    padding: 20px;
+    float: left;
+    margin-right: 40px;
+}
+.sec2 .div2{
+    max-width: 60%; 
+    padding: 20px;
+    float: left;
+}
+.sec2 .div2 div{
+  padding: 10px 0 0 20px;
+}
+/*work experience end */
+
+/* Education section starts*/
+.sec3 .one{
+    max-width: 40%;
+    padding: 20px;
+    float: left;
+}
+.sec3 .two{
+    max-width: 30%;
+    padding: 20px;
+    float: left;
+    margin-left: 120px;
+}
+.sec3 .three{
+    max-width: 30%;
+    padding: 20px;
+    float: left;
+}
+/* Education section ends*/
+/* for section 4 */
+.sec4 .one{
+    max-width: 40%;
+    padding: 20px;
+    float: left;
+}
+.sec4 .two{
+    max-width: 60%;
+    padding: 20px;
+    float: left;
+    margin-left: 35px;
+}
+/* section 4 end */
+
+/* for section 5 */
+.sec5 .one{
+    max-width: 40%;
+    padding: 20px;
+    float: left;
+}
+.sec5 .two{
+    max-width: 60%;
+    padding: 20px;
+    float: left;
+    margin-left: 180px;
+}
+/* section 4 end */
+/* section 6 starts*/
+.sec6 .one{
+    max-width: 40%;
+    padding-top: 20px;
+    float: left;
+}
+.sec6 .two{
+    max-width: 60%;
+    padding: 20px;
+    float: left;
+    margin-left: 40px;
+}
+/* section 6 end */
+
+/* section 7 starts*/
+.sec7 .one{
+    max-width: 40%;
+    padding-top: 20px;
+    float: left;
+}
+.sec7 .two{
+    max-width: 60%;
+    padding: 20px;
+    float: left;
+    margin-left: 40px;
+}
+/* section 7 end */
+
+/* section 8 starts*/
+.sec8 .one{
+    max-width: 40%;
+    padding-top: 20px;
+    float: left;
+}
+.sec8 .two{
+    max-width: 60%;
+    padding: 20px;
+    float: left;
+    margin-left: 40px;
+}
+/* section 8 end */
+
+/*footer section*/
+.footer_sec{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}

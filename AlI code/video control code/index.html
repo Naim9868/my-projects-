@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube-Style Video Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <video id="video" src="Limitless in Real Life(720P_HD).mp4" poster="thumbnail.jpg"></video>
+        
+        <div class="controls-container">
+            <div class="controls">
+                <div class="progress-controls">
+                    <div class="time" id="current-time">0:00</div>
+                    <div class="progress-bar-container" id="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <img class="preview-thumbnail" id="preview-thumbnail" src="">
+                    </div>
+                    <div class="time" id="duration">0:00</div>
+                </div>
+                
+                <div class="main-controls">
+                    <div class="left-controls">
+                        <button class="control-btn" id="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        
+                        <button class="control-btn" id="mute-btn">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        
+                        <div class="volume-container">
+                            <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.1" value="1">
+                        </div>
+                        
+                        <div class="time" id="time-remaining">0:00</div>
+                    </div>
+                    
+                    <div class="right-controls">
+                        <button class="control-btn" id="speed-btn" title="Playback speed">
+                            <span>1x</span>
+                        </button>
+                        
+                        <button class="control-btn" id="quality-btn" title="Quality">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        
+                        <div class="settings-menu" id="quality-menu">
+                            <div class="settings-item" data-quality="360">360p</div>
+                            <div class="settings-item active" data-quality="720">720p</div>
+                            <div class="settings-item" data-quality="1080">1080p</div>
+                        </div>
+                        
+                        <div class="settings-menu" id="speed-menu">
+                            <div class="settings-item" data-speed="0.5">0.5x</div>
+                            <div class="settings-item active" data-speed="1">1x</div>
+                            <div class="settings-item" data-speed="1.5">1.5x</div>
+                            <div class="settings-item" data-speed="2">2x</div>
+                        </div>
+                        
+                        <button class="control-btn" id="theater-btn" title="Theater mode">
+                            <i class="fas fa-film"></i>
+                        </button>
+                        
+                        <button class="control-btn" id="fullscreen-btn" title="Fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>

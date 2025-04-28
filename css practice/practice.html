@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="practice.css"> -->
+    <style>
+        .navManu{
+            /* width: 500px; */
+            height: 50px;
+            background-color: blueviolet;
+            margin: 0 auto;
+        }
+        .navManu ul li{
+            list-style-type: none;
+            float: left;
+            /* margin: 20px; */
+            padding: 15px 10px 10px 10px;
+            /* background-color: aqua; */
+           
+        }
+        .navManu ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        .dropdown{
+            display: block;
+            position: relative;
+        }
+        .drop-content a{
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            width: 100px;
+        }
+        .drop-content{
+            background-color: rgb(46, 115, 153);
+            margin-top: 10px;
+        }
+        .drop-content{
+            display: none;
+        }
+        .dropdown:hover .drop-content{
+            display: block;
+            position: absolute;
+            left:0px;
+            z-index: 1;
+        }
+        .drop-content a:hover{
+            background-color: rgb(107, 107, 233);
+        }
+        .navManu ul li:hover{
+           background-color: gray;
+        }
+       
+    </style>
+</head>
+<body>
+   
+
+    <div class="navManu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tutorial">Tutorial</a></li>
+            <li><a href="#about">About</a></li>
+            <li  class="dropdown"><a href="#contact">Contact</a>
+                <div class="drop-content">
+                    <a href="Virtual1">Vartual_1</a>
+                    <a href="link2">link2</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,492 @@
+/* reset code and common codes starts here */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    outline: 0; 
+    font-weight: 400;
+}
+
+html{
+    background-color: #fafafa;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: "Roboto", serif;
+    font-family: "Italianno", cursive;
+    font-family: "Roboto", serif;
+}
+body{
+    background-color: #fff;
+    width: 120rem;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4 , -0.1rem 0rem 0.1rem #c4c4c4;
+}
+/* reset code and common codes ends here */
+
+/* header design starts here */
+
+.logo_figure{
+    font-size: 3rem;
+    color: white;
+    /* margin-left: 20px; */
+}
+header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    min-height: 5vh;
+}
+header ul li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    padding: 5px; border-radius: 10px;
+   
+}
+header ul li:hover{
+    background-color: rgb(142, 227, 253);
+    color: black;
+    transition: background-color 0.3s;
+}
+header ul li a{
+    color: white;
+}
+header ul li a:hover{
+    color: black;
+}
+/* header design ends here. */
+
+/* banner section starts here */
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    padding: 20px;
+}
+.banner article{
+    flex-basis: 50%;
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: justify;
+    
+}
+.banner article h1{
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    line-height: 30px;
+    text-align: center;
+}
+.banner aside{
+    padding: 30px;
+    flex-basis: 50%;
+    text-align: justify;
+}
+.banner-image img{
+   width: 50rem;
+   height: 50rem;
+   border: 3px solid blue;
+   
+}
+/* banner section ends here  */
+
+
+/* about me(including card) section design starts  here */
+.about-me{
+    background-color: gray;
+    min-height: 60vh;
+}
+.heading{
+    text-align: center; 
+    font-family: "Italianno", cursive;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+
+}
+ .card-container{
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   /* border: 1px solid black; */
+ }
+ .card{
+    border-radius: 5px;
+    background-color: #c4c4c4;
+    height: 400px; width: 33%;
+    margin: 20px;
+    padding: 20px;
+    text-align: justify;
+    position: relative;
+    box-shadow: 5px 5px 4px white;
+    transition: transform  0.4s;
+ }
+.card:hover{
+    /* box-shadow: 10px 10px 8px white; */
+    transform: scale(1.03);
+}
+ .card-header{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ }
+ .card-desc p{
+    font-size: 1.5rem;
+ }
+ .card button{
+    background-color: rgb(255, 213, 3);
+    border:none; font-weight: bold;
+    width: 150px; margin-left: 10px;
+    padding: 5px; margin-top: 15px ; margin-bottom: 5px;
+    box-shadow: 3px 3px 6px white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -10px);
+   
+ }
+
+/* about me section Ends here */
+
+
+
+
+/* archives section design starts here */
+.archive{
+    padding: 5rem 1rem;
+    min-height: 95vh;
+}
+.archive-image{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
+}
+.archive ul{
+    display:flex;
+    text-align: center;
+}
+.archive div h1{
+    text-align: center; 
+    font-family: "Italianno", cursive;
+    font-size: 50px;
+    font-weight: bold; margin: 20px 0;
+}
+.archive .image-list img{
+    height: 100%;
+    width: 100%; border-radius: 5px;
+    transition: transform 0.4s;
+}
+
+.archive-image li{
+    display: inline;
+    margin: 2rem;
+}
+.archive-image img:hover{
+    transform: scale(1.1);
+}
+/* archives section design ends here */
+
+
+
+
+/* blog design starts here */
+.blog-posts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.blog-posts h1{
+    text-align: center; 
+    font-family: "Italianno", cursive;
+    font-size: 50px;
+    font-weight: bold; margin: 20px 0;
+}
+.blog-post{
+    display: flex;
+    max-width: 70%;
+    justify-content: space-evenly;
+    box-shadow: 4px 4px 4px gray, -4px 0 4px gray;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.4s;
+}
+.blog-post-aside{
+    flex: 1;
+}
+.blog-content{
+    flex: 2;
+}
+.blog-post-aside img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.blog-content h2{
+    font-size: 2rem;
+    margin: 5px 10px;
+}
+.blog-content h3{
+    font-size: 1,5rem;
+    margin: 5px 10px;
+}
+.blog-content p{
+
+    font-size: 1.2rem;
+    margin: 5px 10px;
+    text-align: justify;
+}
+.blog-btn{
+    font-size: 1,5rem;
+    margin: 5px 10px;
+    border: none;
+    background-color: orange;
+    color: gray;
+    padding: 5px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 4px gray;
+}
+.blog-post:hover{
+    transform: scale(1.1);
+}
+/* blog design ends here */
+
+/* contacts design starts here */
+.contact{
+    background-color: gray;
+    min-height: 60vh;
+    margin-top: 30px;
+}
+.contacts h2{
+    text-align: center; 
+    font-family: "Italianno", cursive;
+    font-size: 70px;
+    font-weight: bold; margin: 20px 0;
+    color: white;
+}
+.contacts form{
+     width: 40%;
+    height: 100%;
+   margin: 0 auto;
+   background-color: #c4c4c4;
+   /* border: 1px solid black; */
+   box-shadow: 0.5rem 0.5rem 0.5rem black, -0.5rem 0 0.5rem black;
+}
+.contacts form input{
+    margin: 10px 20px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    background-color: azure;
+    border: none;
+}
+.contacts form input:focus{
+    background-color: white;
+    border: 1px solid orange;
+}
+.textarea{
+    height: 100px;
+}
+
+/* contacts design ends here */
+
+
+/* responsive starts here */
+@media screen and (max-width: 400px) {
+    
+}
+@media screen and (max-width: 600px) {
+    /* responsive navbar design starts here */
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+       
+    }
+    header ul li{
+        display: block;
+       margin-bottom: 5px;
+       background-color: #c4c4c4;
+        padding: 0 150px;
+        border-radius: 10px;
+        height: 25px; padding-top: 4px;
+    }
+    header ul li a{
+        color: black;
+    }
+    .logo_figure{
+        margin-right: 20px;
+    }
+
+     /* respossive deesign ends here. */
+
+
+     
+    /*responsive banner starts here. */
+    .banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       /* margin-top: 100px;  */
+       /* margin-bottom: 20px; */
+        min-height: 80vh;
+       
+    }
+    .banner article{
+        flex-basis: 30%;
+    }
+    .banner-image{ 
+        
+        text-align: justify;
+    }
+    .banner-image img{
+        width: 30rem;
+        height: 30rem;
+    }
+    /* responsive banner ends here */
+
+
+
+    /* responsive about me section starts here */
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       /* border: 1px solid black; */
+     }
+     .card{
+        width:80%;
+     }
+    /* responsive about me section ends here */
+
+    /* responsive archive starts */
+    .archive ul{
+       flex-wrap: wrap;
+        text-align: center;
+    }
+    /* responsive archive ends */
+
+    /* responsive blog */
+    .blog-post{
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+   
+    .blog-posts::after{
+        display: table;
+        content: '';
+        clear:both;
+    }
+
+    /* resfponsive contact */
+    .contacts form{
+        max-width: 70%;
+    }
+    /* responsive contacts end here */
+
+    /* responsive footer starts here */
+    #Footer{
+        height: 70px;
+        flex-direction: column;
+       
+    }
+     #Footer .copyright-text,#Footer .footer-menu{
+        width: 100%;
+        display: block;
+        font-size: 16px;
+        
+    }
+    #Footer .footer-menu{
+        margin-top: 10px;
+    }
+    .footer-menu ul li{
+        margin: 5px;
+        font-size: 16px;
+    }
+    /* responsive footer ends here */
+}
+@media screen and (max-width: 800px) {
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       /* border: 1px solid black; */
+     }
+     .card{
+        width:80%;
+     }
+     .archive{
+        padding: 5rem 1rem;
+        min-height: auto;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .archive ul{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+/* responsive ends here */
+
+/* footer design starts here */
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.copyright-text,.footer-menu{
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+   
+}
+
+
+.footer-menu ul{
+   display: inline;
+    /* position: relative;
+    left: 40%;  */
+    
+}
+.footer-menu li{
+    display: inline;
+    text-align: center;
+    margin: 15px;
+}
+
+/* footer design ends here */

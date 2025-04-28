@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+<!--this is from lecture of anisul vai but created myself-->
+    <div class="container">
+        <div class="cal-head">
+            <input type="text" id="display" maxlength="15">
+        </div>
+
+       <div class="cal-body">
+
+            <div>
+                <input type="button" class="btn btn-operator" value="AC">
+                <input type="button" class="btn btn-operator" value="+/-">
+                <input type="button" class="btn btn-operator" value="%">
+                <input type="button" class="btn btn-operator" value="/">
+            </div>
+
+            <div>
+                <input type="button" class="btn" value="7" onclick="Value(7)">
+                <input type="button" class="btn" value="8" onclick="Value(8)">
+                <input type="button" class="btn" value="9" onclick="Value(9)">
+                <input type="button" class="btn btn-operator" value="x">
+            </div>
+
+            <div> 
+                <input type="button" class="btn" value="4" onclick="Value(4)">
+                <input type="button" class="btn" value="5" onclick="Value(5)">
+                <input type="button" class="btn" value="6" onclick = "Value(6)">
+                <input type="button" class="btn btn-operator" value="-">
+            </div>
+
+            <div>
+                <input type="button" class="btn" value="1" onclick="Value(1)">
+                <input type="button" class="btn" value="2" onclick="Value(2)">
+                <input type="button" class="btn" value="3" onclick="Value(3)">
+                <input type="button" class="btn btn-operator" value="+">
+            </div>
+
+            <div>
+                <input type="button" class="btn" value="0" onclick="Value(0)">
+                <input type="button" class="btn" value="."  onclick="Value('.')">
+                <input type="button" class="btn" value="DEL" onclick="Value('del')">
+                <input type="button" class="btn " style="background-color:orange;" value="=">
+            </div>
+       </div>
+    </div>
+    <script>
+        function Value(x){
+            let a=x;
+            document.getElementById("display").innerHTML = a;
+            console.log(a);
+        }
+    </script>
+</body>
+</html>

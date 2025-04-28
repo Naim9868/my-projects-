@@ -1,0 +1,74 @@
+/* Reset default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light mode background */
+    color: #333; /* Light mode text */
+    transition: background 0.3s, color 0.3s; /* Smooth theme transition */
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #333;
+    color: white;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Sections */
+  section {
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  }
+
+
+  /* Responsive Design (Flexbox/Grid)
+
+Use CSS Grid for the projects section: */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+} 
+
+/* Add Animations
+
+Fade-in effects with CSS: */
+section {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}

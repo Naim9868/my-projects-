@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Menu</title>
+    <style>
+        .menu{
+            display: flex;
+            justify-content: flex-end;
+            background-color:rgb(127, 189, 255)
+        }
+        .menu a{
+            text-decoration: none;
+            padding: 15px;
+            color: white;
+        }
+        .menu a:hover{
+            background-color:rgb(154, 82, 222)
+        }
+
+        @media screen and (max-width:600px){
+            .menu{
+                flex-direction: column;
+                padding: 20px;
+            }
+            .menu a{
+                background-color: blueviolet;
+                margin: 10px 10px  10px  10px;
+                border-radius: 10px; 
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#tutorials">Totorials</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.setValue{
+    margin: 20px;
+    
+}
+input{
+    width: 40px;
+}
+main{
+    padding:10px;
+    border: 1px solid black;
+}

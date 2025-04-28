@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- create a hacking simulator which has green background and it shows
+     these messages with random dealay of 1 to 5 seconds
+     
+     Initializing Hacking...
+     Reading your Files...
+     Password files Detected...
+     Sending all passwords and personal files to server...
+     Cleaning up...
+     
+     the three dots must blink so that it looks like a real terminal...-->
+    <div></div>
+    <script>
+            // random time delay for each item...
+            
+            let timeDelay = async () => {
+                return new Promise((resolve, reject) => {
+                    let timeout = Math.random() * 4 + 1;
+                    setTimeout(() => {
+                        resolve();
+                    }, timeout * 1000);
+                })
+            }
+            
+               
+    
+            
+            let text = ["Initializing Hacking",
+                        "Reading your Files",
+                        "Password files Detected",
+                        "Sending all passwords and personal files to server",
+                        "Cleaning up"];
+
+
+
+                        
+            async function main(text){
+                
+                for (const x of text) {
+                    await displayElement(x);
+                    
+                }
+
+                
+                async function displayElement(x) {
+                    await timeDelay();
+
+                    let TextForShow = document.createElement("div");
+                    TextForShow.innerHTML = x;
+                    // console.log(TextForShow.textContent);
+                    let div = document.querySelector("div");
+                    
+                    div.appendChild(TextForShow);
+
+                    //for blinking the dots..
+                    let interVal = setInterval(()=>{
+                        let last = document.querySelectorAll("div");
+                        last = last[last.length-1];
+
+                        if(last.innerHTML.endsWith(".....")){
+                            last.innerHTML = last.innerHTML.slice(0,last.innerHTML.length-5);
+                        }else{
+                            last.innerHTML = last.innerHTML + ".";
+                        }
+                        
+                    },500);
+
+                    //for clear blinking..
+                    setTimeout(()=>{
+                                clearInterval(interVal);
+                        },6000);
+                    
+                }
+                
+            }
+
+            main(text);
+    </script>
+</body>
+</html>
